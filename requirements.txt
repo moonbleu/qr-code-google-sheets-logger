@@ -1,0 +1,5 @@
+Flask>=2.3
+google-api-python-client>=2.0
+google-auth>=2.0
+qrcode>=7.3
+python-dotenv>=1.0
