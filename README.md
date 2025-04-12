@@ -15,10 +15,16 @@ A simple Flask app to register users in Google Sheets and generate per‑user QR
 
 ## Getting Started
 
-git clone https://github.com/your‑username/my‑qr‑logger.git
-cd my‑qr‑logger
+git clone https://github.com/moonbleu/qr-code-google-sheets-logger.git
+
+cd qr-code-google-sheets-logger
+
 python3 -m venv venv
+
 source venv/bin/activate
+
 pip install -r requirements.txt
+
 cp .env.example .env
+
 python app.py
