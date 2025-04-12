@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Create New User</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #1e1e2e;
+        color: #cad3f5;
+        font-family: system-ui, sans-serif;
+      }
+      .form-container {
+        background-color: #313244;
+        padding: 2rem;
+        border-radius: 0.75rem;
+        width: 320px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      }
+      h1 {
+        text-align: center;
+        color: #8caaee;
+        margin-bottom: 1.5rem;
+      }
+      .error {
+        color: #f28fad;
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+      input[type="text"] {
+        width: 100%;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+        border: 1px solid #45475a;
+        border-radius: 0.5rem;
+        background-color: #1e1e2e;
+        color: #cad3f5;
+      }
+      input[type="text"] {
+        width: 100%;
+        padding: 0.4rem 0.5rem;
+        margin-bottom: 1rem;
+        border: 1px solid #45475a;
+        border-radius: 0.5rem;
+        background-color: #1e1e2e;
+        color: #cad3f5;
+        font-size: 0.95rem;
+        line-height: 1.4;
+        box-sizing: border-box;
+      }
+      button {
+        width: 100%;
+        padding: 0.75rem;
+        background-color: #8caaee;
+        color: #1e1e2e;
+        border: none;
+        border-radius: 0.5rem;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #96cdfb;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <h1>Create a New User</h1>
+      {% if error %}
+        <p class="error">{{ error }}</p>
+      {% endif %}
+      <form method="post">
+        <p><input type="text" name="name" placeholder="Full Name" required></p>
+        <p><button type="submit">Create User</button></p>
+      </form>
+    </div>
+  </body>
+</html>

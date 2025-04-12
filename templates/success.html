@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>User Created</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #1e1e2e;
+        color: #cad3f5;
+        font-family: system-ui, sans-serif;
+      }
+      .success-container {
+        background-color: #313244;
+        padding: 2rem;
+        border-radius: 0.75rem;
+        text-align: center;
+        width: 360px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      }
+      h1 {
+        color: #a6e3a1;
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+      }
+      p {
+        margin-bottom: 1.25rem;
+      }
+      strong {
+        color: #f2cdcd;
+      }
+      img {
+        max-width: 100%;
+        border-radius: 0.5rem;
+        border: 2px solid #45475a;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="success-container">
+      <h1>✅ Successfully added “{{ name }}” to TEMPLATE sheet.</h1>
+      <p>Scan this QR code to log attendance for <strong>{{ name }}</strong>:</p>
+      <img src="data:image/png;base64,{{ qr_code }}" alt="QR code for {{ name }}">
+    </div>
+  </body>
+</html>

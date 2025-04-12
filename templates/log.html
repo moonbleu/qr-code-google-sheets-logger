@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title or "Message" }}</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #1e1e2e;
+      color: #cad3f5;
+      font-family: system-ui, sans-serif;
+    }
+    .message-box {
+      background-color: #313244;
+      padding: 2rem;
+      border-radius: 0.75rem;
+      text-align: center;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      font-size: 1.1rem;
+      color: 
+        {% if category == 'error' %}
+          #f28fad
+        {% elif category == 'success' %}
+          #a6e3a1
+        {% else %}
+          #89b4fa
+        {% endif %};
+    }
+  </style>
+</head>
+<body>
+  <div class="message-box">
+    {% if category == 'error' %}
+      ⚠️
+    {% elif category == 'success' %}
+      ✅
+    {% else %}
+      ℹ️
+    {% endif %}
+    <p>{{ message }}</p>
+  </div>
+</body>
+</html>
